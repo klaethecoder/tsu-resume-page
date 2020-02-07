@@ -7,7 +7,7 @@
             img.bio-image { float: left; padding: 0rem 3rem 0rem 1rem; height: 18.5rem; }
         </style>
     </head>
-    <body style="background-color:lightgrey; font-family:monospace;">
+    <body style=" font-family:monospace;">
         <div class="container">
             <div class="row">
                 <div class="twelve column">
@@ -52,7 +52,19 @@
 
                 </div>
             </div>
-
+            <button id = "button">Change the Back Ground</button>
         </div>
     </body>
+    <script>
+        let button = document.querySelector("#button")
+            button.addEventListener('click', function(){
+                let color="#"
+                let code = "0123456789ABCDEF"
+                for(let i=0;i<6;i++){
+                    color += code[Math.floor(Math.random() * 16)]
+                }
+               document.body.style.backgroundColor = color
+            });
+           
+    </script>
 </html>
