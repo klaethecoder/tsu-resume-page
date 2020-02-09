@@ -6,6 +6,13 @@
         <script src="https://kit.fontawesome.com/1858c15a17.js" crossorigin="anonymous"></script>
         <style>
             img.bio-image { float: left; padding: 0rem 3rem 0rem 1rem; height: 18.5rem; }
+            #buttons{
+                text-align: center;
+            }
+            button:hover{
+                background-color: lightpink;
+                color: white;
+            }
         </style>
     </head>
     <body style=" font-family:monospace;">
@@ -54,11 +61,16 @@
 
                 </div>
             </div>
+            <div id='buttons'>
             <button id = "button">Change the Back Ground</button>
+            <button id = "button2" onclick="reset()">Reset the Back Ground</button>
+        </div>
         </div>
     </body>
     <script>
         let button = document.querySelector("#button")
+        let button2 = document.querySelector("#button2")
+
             button.addEventListener('click', function(){
                 let color="#"
                 let code = "0123456789ABCDEF"
@@ -67,6 +79,11 @@
                 }
                document.body.style.backgroundColor = color
             });
+
+             button2.addEventListener('click',function(){
+                document.body.style.backgroundColor = 'lightgrey'
+             });
+
            
     </script>
 </html>
